@@ -44,7 +44,7 @@ print("")
 print("Now, should I go to work?")
 if cw in weather[0] and ca in arrival:
     print("I should be able to go to work.")
-if cw in weather[1] and ca in arrival:
+elif cw in weather[1] and ca in arrival:
     print("I should be able to go to work. It's just cloudy")
 else:
     print("Can't go to work for today.")
