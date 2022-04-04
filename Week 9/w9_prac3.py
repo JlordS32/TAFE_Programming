@@ -1,5 +1,4 @@
 import random
-import sys
 
 weather = ["sunny", "cloudy", "rainy"]
 arrival = ["on time", "early", "late"]
@@ -15,7 +14,7 @@ while checking not in weather:
             input("Weather: ").lower()
             if checking == "no":
                 print("AAAAAAAAAAA")
-                sys.exit()
+                exit()
     else:
         print("Invalid command. Do it again")
         checking = input("What's the weather today? ").lower()
