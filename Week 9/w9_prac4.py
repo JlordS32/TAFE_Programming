@@ -82,17 +82,20 @@ if confirmation == n[0]:
             quit()
     print("Congrats! You won!")
 
+retry = 0
 if confirmation == n[1]:
     print("")
     print("You'll have to guess random number.")
     num = random.randint(1, 10)
     guess = int(input("Guess the random number from 1 - 10: "))
     while guess != num:
+        retry += 1
         print("Bad guess, the random number is", num)
         num = random.randint(1, 10)
-        guess = input("Guess the random number: ").lower()
+        guess = int(input("Guess the random number: "))
         if guess == "no":
             print("Ok, you gave up.")
             print("Goodbye.")
             quit()
+    print("Retries:", retry)
     print("Congrats! You got it right!")
