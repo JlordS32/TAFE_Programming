@@ -22,6 +22,7 @@ while confirmation not in n:
     confirmation = input("Please press either 1 or 2: ")
 
 if confirmation == n[0]:
+    print("")
     print("So you wanna play rock, paper, and scissor. Okay.")
     print("Whoever gets the score of 2 wins!")
     while score != 2:
@@ -31,40 +32,40 @@ if confirmation == n[0]:
             ans = input("Input: ").lower()
         for i in random.sample(game1, 1):
             if i == ans:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 print("TIE!")
             elif ans == game1[0] and i == game1[1]:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 opponent_score += 1
                 print("You lost this round!")
                 print("Your score: ", str(score) + "/2")
                 print("Opponent score: ", str(opponent_score) + "/2")
             elif ans == game1[0] and i == game1[2]:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 score += 1
                 print("You won this round!")
                 print("Your score: ", str(score) + "/2")
                 print("Opponent score: ", str(opponent_score) + "/2")
             elif ans == game1[1] and i == game1[0]:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 score += 1
                 print("You won this round!")
                 print("Your score: ", str(score) + "/2")
                 print("Opponent score: ", str(opponent_score) + "/2")
             elif ans == game1[1] and i == game1[2]:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 opponent_score += 1
                 print("You lost this round!")
                 print("Your score: ", str(score) + "/2")
                 print("Opponent score: ", str(opponent_score) + "/2")
             elif ans == game1[2] and i == game1[1]:
-                print("Opponent:", i)
-                print("You:", ans)
+                print("Opponent:", i.upper())
+                print("You:", ans.upper())
                 score += 1
                 print("You won this round!")
                 print("Your score: ", str(score) + "/2")
@@ -79,8 +80,10 @@ if confirmation == n[0]:
         if opponent_score == 2:
             print("You lost. Better try again next time.")
             quit()
+    print("Congrats! You won!")
 
 if confirmation == n[1]:
+    print("")
     print("You'll have to guess random number.")
     num = random.randint(1, 10)
     guess = int(input("Guess the random number from 1 - 10: "))
@@ -92,4 +95,4 @@ if confirmation == n[1]:
             print("Ok, you gave up.")
             print("Goodbye.")
             quit()
-print("Congrats! You got it right!")
+    print("Congrats! You got it right!")
