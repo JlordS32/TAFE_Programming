@@ -11,7 +11,7 @@ while checking not in weather:
         checking = input("So, what's the weather? ").lower()
         if checking == "no":
             print("CHECK THE WEATHER!!")
-            input("Weather: ").lower()
+            checking = input("Weather: ").lower()
             if checking == "no":
                 print("AAAAAAAAAAA")
                 exit()
