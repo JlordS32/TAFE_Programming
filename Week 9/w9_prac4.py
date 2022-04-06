@@ -30,7 +30,7 @@ if confirmation == n[0]:
         while ans not in game1:
             print("Please use the proper command.")
             ans = input("Input: ").lower()
-        for i in random.sample(game1, 1):
+        for i in random.sample(game1, 1): #random.sample randomly selects 1 string from the variable 'game1'
             if i == ans:
                 print("Opponent:", i.upper())
                 print("You:", ans.upper())
